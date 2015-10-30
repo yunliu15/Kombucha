@@ -44,6 +44,12 @@
 .category-title { margin-bottom:0; }
 
 
+/* test for social media */
+/*.header-social {
+
+	margin: 0 470px 0 0;
+	height: 24px;
+}*/
 
 
 /* Global Messages
@@ -169,6 +175,10 @@
 .header-regular .right-column {
 	text-align: right;
 }
+
+
+
+/* test for drop down */
 
 
 /* Left column 
