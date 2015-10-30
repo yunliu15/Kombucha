@@ -1108,6 +1108,8 @@
 /* test for category */
 .category-products .products-grid .item .button{
 	color:#566B67;
+	padding: 0px 15px;
+	margin-right:50px;
 }
 .category-products .products-grid .item .button:hover{
 	color: #566B67;
@@ -1119,8 +1121,11 @@
 .category-products .products-grid .item .button:hover span{color:#566B67!important;border:none;}
 .category-products .products-grid .item .actions a:hover{color:#566B67!important;}
 
-.products-grid .price-box {font-size:1.2em;}
-.category-products-grid .item{border:none;}
+.products-grid .price-box {font-size:1.25em;}
+.category-products-grid .item{border:none; margin-top:-50px;}
+.category-products-grid .item:nth-of-type(1),.category-products-grid .item:nth-of-type(2),.category-products-grid .item:nth-of-type(3) {margin-top:0;}
+
+
 .category-products-grid .item .product-name {min-height: 50px;}
 .category-products-grid .item .desc_std {min-height: 100px;font-size: 14px;}
 
@@ -1131,13 +1136,22 @@
 	text-align: left;
 }
 
+.products-grid.equal-height .item .actions{
+	position: static;
+	float:right;
+	margin-top:0;
+}
+
 .rating-box .rating {
 	background: url(../images/img/bkg_rating.gif) 0 100% repeat-x
 }
+.ratings .amount {display:none;}
 /*fix footer button */
 #subscribe-form .button:hover span{border:none;}
 #subscribe-form .button:hover{color:#555;}
 
+
+.main .inner-container{padding:0;}
 /**
  *
  *
