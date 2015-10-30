@@ -1119,14 +1119,13 @@
 .category-products .products-grid .item .button:hover span{color:#566B67!important;border:none;}
 .category-products .products-grid .item .actions a:hover{color:#566B67!important;}
 
-.products-grid .price-box {font-size:1.3em;}
+.products-grid .price-box {font-size:1.2em;}
 .category-products-grid .item{border:none;}
 .category-products-grid .item .product-name {min-height: 50px;}
 .category-products-grid .item .desc_std {min-height: 100px;font-size: 14px;}
 
 .products-grid .price-box {
 	margin: 0px;
-	width: 88px;
 	float: left;
 	padding: 0px 15px 10px 0;
 	text-align: left;
