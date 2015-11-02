@@ -1114,9 +1114,32 @@
 
 
 /* test for category */
+#search_mini_form .form-search .button:before {
+	content:"Go";
+	color:#566B67;
+	font-size:80%;
+	font-family: sans-serif;
+}
+
+.category-contain:after {
+	display: block;
+	content: ".";
+	clear: both;
+	font-size: 0;
+	line-height: 0;
+	height: 0;
+	overflow: hidden;
+}
 
 .category-contain .category-description-lf{
 	font-size:14px;
+	box-sizing: border-box;
+	width: 35%;
+}
+
+.category-contain .category-description-rt{
+	width: 65%;
+	float:right;
 }
 .category-contain .category-description-lf p:nth-of-type(2) {
 	text-align: center;
@@ -1288,7 +1311,9 @@
 	cursor: pointer;
 	line-height:38px;
 	min-width:0;
+	margin-top: 8px;
 }
+
 
 #product-addtocart-button span span {
 	background-color: #af1f31;
@@ -1299,6 +1324,23 @@
 	background: -moz-linear-gradient(top, #AF1F31, #d01f31);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AF1F31', endColorstr='#d01f31');
 }
+#product-addtocart-button:hover span {border:none;}
+#product-addtocart-button:hover span span{
+	color: #fff;
+	border: 1px solid #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F60), to(#d01f31));
+}
+
+.container2-wrapper .product-options {font-size:14px;}
+.container2-wrapper .product-options ul.options-list,.container2-wrapper .product-options .price {color:#333;}
+
+#product-tabs {font-size: 14px;}
+#product-tabs .std ul {list-style: disc;margin-left:15px;}
+#product-tabs .std li {padding-left:0;}
+
+#itemslider-related-multi .owl-controls.clickable .owl-buttons div:hover {background-color: #af1f31;}
+
+.product-view .availability {color:#333;}
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 1.5),
