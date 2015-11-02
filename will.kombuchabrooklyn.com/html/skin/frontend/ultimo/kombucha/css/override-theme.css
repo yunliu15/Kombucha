@@ -63,7 +63,7 @@
 	-webkit-box-shadow: 4px 4px 14px -8px #000;
 	box-shadow: 4px 4px 14px -8px #000;
 }
-
+#mini-cart a {box-shadow:none;}
 #mini-cart a:hover {color:#000!important;box-shadow: none;}
 .header-primary-container .central-column {width: 15%; position: relative; top:-45px;}
 
