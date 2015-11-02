@@ -279,6 +279,12 @@
 	float: right;
 }
 
+/* test for main column */
+.home-post a:hover {
+	color: #000 !important;
+}
+
+
 
 /* Central column
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
