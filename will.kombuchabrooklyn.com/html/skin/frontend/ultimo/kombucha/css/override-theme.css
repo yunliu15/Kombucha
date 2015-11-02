@@ -67,6 +67,7 @@
 #mini-cart a:hover {color:#000!important;box-shadow: none;}
 .header-primary-container .central-column {width: 15%; position: relative; top:-45px;}
 
+#header-account li a:hover {color: #af1f31!important;}
 
 /* Global Messages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -278,6 +279,13 @@
 .header-regular .right-column .nav-container {
 	float: right;
 }
+
+/* test for main column */
+.home-post a:hover {
+	color: #000 !important;
+}
+
+
 
 
 /* Central column
@@ -1106,6 +1114,92 @@
 
 
 /* test for category */
+
+.category-contain .category-description-lf{
+	font-size:14px;
+}
+.category-contain .category-description-lf p:nth-of-type(2) {
+	text-align: center;
+	font-size: medium;
+	font-family: book antiqua,palatino;
+	font-style: italic;
+	margin-top:30px;
+}
+.category-contain .category-description-lf a {
+	color: #0000ff;
+}
+.category-contain .category-description-lf a:hover{
+	color: #0000ff!important;
+}
+}
+/*tool bar*/
+.category-products .toolbar {position: relative;}
+.category-products .toolbar .sorter .amount {display:none;}
+.toolbar .sorter {padding:0;}
+.sorter .limiter {float: right;}
+.toolbar .sorter select {
+	height: 21px;
+	line-height: 17px;
+	padding:1px;
+	font-size: 100%;
+}
+.toolbar .pager{
+	position:absolute;
+	right:160px;
+	top: -12px;
+}
+.toolbar-bottom .toolbar .pager {display: none;}
+.category-products .toolbar .pager .pages li, .category-products .toolbar .pager .pages a{width: auto; height: auto; background:none;}
+.toolbar .pager .pages li {margin-right: 5px;}
+.toolbar .pager .pages strong {display:none;}
+.toolbar .pager .pages a.ic-right:before, .toolbar .pager .pages a.ic-left:before {content:'';}
+.toolbar .pager .pages {min-width: 100px;}
+.toolbar .pager .pages ol{display:inline;}
+.toolbar .pager .pages ol:after {
+	display: block;
+	content: ".";
+	clear: both;
+	font-size: 0;
+	line-height: 0;
+	height: 0;
+	overflow: hidden;}
+.toolbar .pager .pages li{display:inline;}
+.toolbar .pager .pages li.next, .toolbar .pager .pages li.previous {
+	display:inline;
+	float:right;
+	position:relative;
+	top:4px;
+	}
+.toolbar .pager .pages li.previous {
+	float: left;
+	margin-right:40%;
+}
+
+.toolbar .pager .pages a.next{
+	display: block;
+	height: 22px;
+	width: 22px;
+
+	background: #E3D9CF url('../images/pager_arrow_right.png') 0% 0% no-repeat;
+	transition: background-color 200ms ease-in-out;
+	-webkit-transition: background-color 200ms ease-in-out;
+	-moz-transition: background-color 200ms ease-in-out;
+	-o-transition: background-color 200ms ease-in-out;
+}
+.toolbar .pager .pages a.previous {
+	display: block;
+	float: right;
+	height: 22px;
+	width: 22px;
+	background: #E3D9CF url('../images/pager_arrow_left.png') 0% 0% no-repeat;
+}
+.pager .pages li a.next:hover, .pager .pages li a.previous:hover {
+	background-position: 0% 100%;
+	background-color: #af1f31;
+}
+.category-products .toolbar .pager .pages .current {
+	color: #AF1F31;
+	font-weight: bold;}
 .category-products .products-grid .item .button{
 	color:#566B67;
 	padding: 0px 15px;
@@ -1161,7 +1255,50 @@
  *
  */
 
+/* test for product */
+.product-img-column .img-box .product-image {
+	max-width:100%!important;
+	padding: 0;
+}
+#image-main {
+	width:100%;
+	height:320px;
+}
 
+.product-img-column .img-box .more-images {
+	max-width:100%;
+}
+.product-img-column .img-box .more-images .owl-item{
+	width:auto!important;
+}
+.product-img-column .img-box .more-images .owl-item .item a {
+	padding:0;
+}
+.product-img-column .img-box .more-images .lazyOwl{
+	height:43px;
+}
+#product-addtocart-button {
+	border: 1px solid #000;
+	border-right: 2px solid #000;
+	overflow: visible;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	cursor: pointer;
+	line-height:38px;
+	min-width:0;
+}
+
+#product-addtocart-button span span {
+	background-color: #af1f31;
+	padding:10px 17px;
+	height: 33px;
+	border: 1px solid #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#AF1F31), to(#d01f31));
+	background: -moz-linear-gradient(top, #AF1F31, #d01f31);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AF1F31', endColorstr='#d01f31');
+}
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 1.5),
@@ -1297,4 +1434,15 @@ only screen and (        min-device-pixel-ratio: 1.5)
 	
 	{ background-image:url(../images/sprite-icons-social@2x.png); background-size:500px 200px; }
 
+
+
+
+
 } /* end: media query */
+
+@media only screen and (max-width: 768px){
+	.toolbar .pager{
+		position:static;
+		padding:0;
+	}
+}
