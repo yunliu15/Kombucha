@@ -52,7 +52,7 @@
 	clear: both;
 }
 
-.header-top-container {position: absolute;font-size:13px;width:100%;top:80px;}
+.header-top-container {position: absolute;font-size:13px;width:100%;top:80px;z-index: 9999;}
 #mini-cart-wrapper-regular {position: relative; /*left:50px;*/font-weight:bold;}
 #mini-cart .mini-cart-heading{cursor:pointer;}
 #mini-cart:hover {box-shadow: none;}
@@ -99,6 +99,7 @@
 	border: 1px solid #fff;
 	color:#fff;
 	background: -webkit-gradient(linear, left top, left bottom, from(#AF1F31), to(#d01f31));
+	font-size:14px;
 }
 
 .account-login .button {min-width:0!important;}
@@ -243,16 +244,16 @@
 
 /* test for drop down */
 .main{margin-top: 37px;}
-#nav li {position: relative;}
+.inner-container {position: relative;}
 #nav .nav-submenu {
 
 	position: absolute;
 	border:none;
 	box-shadow: none;
 	padding:0;
-	width: 100%;
+	width: 1000px!important;
 	top: 60px!important;
-	left: 0;
+	left: -2px!important;
 	z-index: 99;}
 #nav .nav-submenu li{
 	float:left;
@@ -976,6 +977,8 @@ border-color:#AF1F31;}*/
 /* Product page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
+
+
 /* Prices
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 */
@@ -1513,6 +1516,16 @@ border-color:#AF1F31;}*/
 
 .product-view .availability {color:#333;}
 
+
+/* About */
+.col3-set .col-2 ul {
+	font-size: 14px;
+	list-style: disc;
+	margin-left:15px;
+}
+.col3-set .col-2 li {
+	margin-top:10px;
+}
 /* test for footer */
 .footer-primary .inner-container{padding:0;}
 
@@ -1699,6 +1712,15 @@ only screen and (        min-device-pixel-ratio: 1.5)
 	.header-regular .hp-blocks-holder .hp-block.central-column {
 		top: 10px;
 	}
+
+	.std p iframe {float:none!important; width: 100%!important;}
+	.std p {padding-left: 0!important;}
+	.std h2 {padding-left: 0!important;}
+
+	.category-products-grid .item{
+
+		padding-bottom:150px!important;
+	}
 }
 @media only screen and (max-width: 850px) {
 	.std .col-narrow.right, .std .col-wide.left {
@@ -1706,8 +1728,9 @@ only screen and (        min-device-pixel-ratio: 1.5)
 	}
 
 	.std .col-narrow.right iframe {
-		max-width: 100%;
+		width: 100%;
 	}
+
 }
 
 
@@ -1730,7 +1753,7 @@ only screen and (        min-device-pixel-ratio: 1.5)
 	.footer-primary .column-three {margin-top:30px;}
 
 
-	#header-cart {top:250px;}
+	#header-cart {top:150px;}
 	.inner-container .hp-block .header-social {text-align: center;margin-top:15px;}
 	.inner-container .hp-block .header-social img {
 		float:none;
@@ -1783,6 +1806,22 @@ only screen and (        min-device-pixel-ratio: 1.5)
 		top: -20px;
 	}
 
+	.category-products-grid .item .product-image-wrapper img {
+		max-height: 85px;
+
+	}
+
+
+	.col3-set .col-1, .col3-set .col-2, .col3-set .col-3 {
+		width: 100%;
+		margin:0;
+		margin-top:30px;
+
+	}
+	/* cart page */
+	#shopping-cart-table .button {
+		width: 234px;
+	}
 }
 
 @media only screen and (max-width:639px) {
