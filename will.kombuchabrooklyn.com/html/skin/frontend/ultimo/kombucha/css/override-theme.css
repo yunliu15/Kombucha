@@ -78,6 +78,33 @@
 .header-social a:hover img{
 	opacity:0.8;
 }
+
+#header-cart button {
+	border: 1px solid #000;
+	border-right: 2px solid #000;
+	overflow: visible;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	cursor: pointer;
+	line-height: 38px;
+	min-width: 0;
+	margin-top: 8px;
+}
+#header-cart button span span {
+	background-color: #af1f31;
+	padding: 9px 17px;
+	height: 33px;
+	border: 1px solid #fff;
+	color:#fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#AF1F31), to(#d01f31));
+}
+#header-cart button:hover span {border:none;}
+#header-cart button:hover span span{
+	border: 1px solid #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F60), to(#d01f31));
+}
 /* Global Messages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 */
@@ -1468,18 +1495,18 @@ border-color:#AF1F31;}*/
 }
 
 /* test for check out */
-.col-main .cart button, #header-cart button {
+.col-main .cart button {
 	color: #566B67;
 	padding: 0px 15px;
 	margin-right: 50px;
 }
-.col-main .cart button:hover, #header-cart button:hover {
+.col-main .cart button:hover {
 	color: #566B67;
 	border: solid 1px #FBC97A;
 	background: #FBC97A;
 	background: -webkit-gradient(linear, left top, left bottom, from(#f9ebc4), to(#FBC97A));
 }
-.col-main .cart button:hover span, #header-cart button:hover span {
+.col-main .cart button:hover span {
 	color: #566B67!important;
 	border: none;
 }
