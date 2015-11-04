@@ -13,7 +13,25 @@
  *
  */
 
+p, span, label, table,li {font-size: 14px;}
+.wrapper h1 {font-size:21px;}
+.wrapper h3 {font-size:16px;}
+.page-title h1 {font-weight:bold;}
+.wrapper .std h2 {font-size:22px;}
+/*.wrapper .button{
+	color:#566B67;
+	padding: 0px 15px;
 
+}*/
+
+.wrapper .button:hover{
+	color: #566B67;
+	border: solid 1px #FBC97A;
+	background: #FBC97A;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f9ebc4), to(#FBC97A));
+}
+
+.wrapper .button:hover span{color:#566B67!important;border:none;}
 
 /* Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
@@ -52,8 +70,9 @@
 	clear: both;
 }
 
-.header-top-container {position: absolute;font-size:13px;width:100%;top:80px;z-index: 9999;}
-#mini-cart-wrapper-regular {position: relative; /*left:50px;*/font-weight:bold;}
+.header-top-container {position: absolute;font-size:13px;width:100%;top:80px;/*z-index: 9999;*/}
+#user-menu-wrapper-regular {position:relative; z-index: 9999;}
+#mini-cart-wrapper-regular {position: relative; /*left:50px;*/font-weight:bold;z-index:9999;}
 #mini-cart .mini-cart-heading{cursor:pointer;}
 #mini-cart:hover {box-shadow: none;}
 #header-cart {
@@ -74,6 +93,8 @@
 #mini-cart a:hover {color:#000!important;box-shadow: none;}
 .header-primary-container .central-column {width: 15%; /*position: relative; top:-45px;*/}
 
+#mini-cart .count {background-color:#AF1F31;}
+
 #header-account li a:hover {color: #af1f31!important;}
 .header-social a:hover img{
 	opacity:0.8;
@@ -86,7 +107,7 @@
 	width: auto;
 	padding: 0;
 	margin: 0;
-	background: transparent;
+	background: #fff;
 	cursor: pointer;
 	line-height: 38px;
 	min-width: 0;
@@ -379,6 +400,10 @@ border-color:#AF1F31;}*/
 	width:40%;
 	margin-top:0;
 	padding: 80px 20px;
+	padding-bottom: 95px;
+	border-bottom: 1px solid #f4f0ec;
+	border-left:1px solid #f4f0ec;
+	border-right: 1px solid #f4f0ec;
 	box-sizing: border-box;
 	background-image: url(../images/category-bg.png);
 	background-repeat: repeat-x;
@@ -394,7 +419,7 @@ border-color:#AF1F31;}*/
 }
 .inner-container .col-main>.category-image {float:right; width:60%; margin:0;}
 
-/*.col-main p iframe {width:60%;}*/
+.col-main p iframe {width:60%;}
 
 .std .col-narrow.right iframe {max-width:120%;}
 
@@ -1539,11 +1564,26 @@ border-color:#AF1F31;}*/
 	width:33.3%;
 }
 
-/* test for check out */
+
+/* test for cart */
+.cart td {vertical-align: middle;}
+#shopping-cart-totals-table .caption {
+	position: static;
+	width: auto;
+	margin-right: 0;
+}
+.cart .totals-inner {
+	padding-right: 40px;
+}
+
 .col-main .cart button {
 	color: #566B67;
 	padding: 0px 15px;
 	margin-right: 50px;
+}
+
+.col-main .cart button:nth-of-type(2) {
+	margin-right: 0;
 }
 .col-main .cart button:hover {
 	color: #566B67;
@@ -1555,6 +1595,7 @@ border-color:#AF1F31;}*/
 	color: #566B67!important;
 	border: none;
 }
+.cart .cart-table .product-name {font-size: 1em;}
 
 /*test for calendar view*/
 .wrap-iframes:after {
@@ -1568,6 +1609,22 @@ border-color:#AF1F31;}*/
 	float:left;
 }
 .wrap-iframes .wrap-google-cal iframe {width:48%; float:right;}
+
+
+/* faq */
+#faq h2 {margin: 30px 0 10px 0;border-bottom: 1px solid #E3D9CF;padding: 0 0 5px 0;}
+#faq span {font-size:medium;}
+#faq h2 span {font-size: 22px;}
+#faq h3 {font-weight:bold;margin: 15px 0 15px 0;}
+#faq ol li {padding: 3px 0;}
+#faq ul {list-style-type: disc;padding: 0px 0 0px 20px;}
+#faq ul li {padding: 3px 0;}
+
+/* cms */
+.std img[title="Cooking with Kombucha"], .std img[width="975"] {
+	width:auto!important;
+	height:auto!important;
+}
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 1.5),
@@ -1799,6 +1856,8 @@ only screen and (        min-device-pixel-ratio: 1.5)
 	}*/
 
 	/* product page */
+	.col-main p iframe {width:100%;}
+
 	.product-img-column .img-box .product-image {
 		width: 100%;
 	}
@@ -1822,6 +1881,9 @@ only screen and (        min-device-pixel-ratio: 1.5)
 	#shopping-cart-table .button {
 		width: 234px;
 	}
+
+	/* cms pages */
+	.cms-img img {width: 50%!important;box-sizing: border-box;margin:0 0 10px 0!important;}
 }
 
 @media only screen and (max-width:639px) {
@@ -1845,10 +1907,12 @@ only screen and (        min-device-pixel-ratio: 1.5)
 @media only screen and (max-width:479px) {
 	.col-main .contain-blog-home .home-post {width:100%;min-height:150px;}
 	.rewardssocial-widgets .rewardssocial-widget {
-		margin-right:5px;
+		margin-right:0px;
 		margin-top:0;
 	}
 
+	.home-base .base-right .right-left, .home-base .base-right .right-right {width:100%;}
 
+	.cms-img img {width: 100%!important;}
 
 }
