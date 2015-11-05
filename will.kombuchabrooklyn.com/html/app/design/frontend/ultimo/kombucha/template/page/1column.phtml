@@ -76,6 +76,15 @@
             preface.style.marginTop = 0;
         }
 
+        else if (preface.innerHTML!=''){
+            var message = document.getElementsByClassName('messages');
+            if (message.length != 0) {
+                preface.style.marginTop = "130px";
+                message[0].style.position = "absolute";
+                message[0].style.top = "30px";
+            }
+        }
+
 </script>
 </body>
 </html>
