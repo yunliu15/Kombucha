@@ -138,14 +138,55 @@
 			<?php echo $this->getChildHtml('container_product_image_1'); ?>
 
 		</div>
-		
+
+
+		<?php if ($_product->isSaleable() && $this->hasOptions()): ?>
+			<div class="product-right">
+			<?php if ($container2_html = $this->getChildChildHtml('container2', '', true, true)): ?>
+				<div class="box-additional <?php echo $grid['cont2Col']; ?>">
+					<div class="container2-wrapper"><?php echo $container2_html; ?></div>
+				</div>
+				<?php echo $this->getReviewsSummaryHtml($_product, false, true); //reviews ?>
+			<?php endif; ?>
+			</div>
+		<?php endif; ?>
+<!--test-->
+
+
+
+		<?php if (!$this->hasOptions()): //add to cart when no options (e.g. simple products) ?>
+		<div class="product-right">
+			<div <?php if ($useRichSnippets) echo $helperSnippets->getOfferItemscope(); ?>>
+				<div class="product-type-data<?php echo $productTypeClasses; ?>"><?php echo $this->getChildHtml('product_type_data'); ?></div>
+				<?php echo $this->getTierPriceHtml(); ?>
+				<?php echo $priceProperties; ?>
+			</div> <?php //end: offers ?>
+
+
+			<?php if($_product->isSaleable()): ?>
+				<div class="add-to-box">
+					<?php echo $this->getChildHtml('addtocart') ?>
+				</div>
+			<?php endif; ?>
+			<?php echo $this->getChildHtml('extra_buttons') ?>
+			<?php echo $this->getReviewsSummaryHtml($_product, false, true); //reviews ?>
+		</div>
+		<?php endif; ?>
+
+		<?php if ($_product->isSaleable() && $this->hasOptions()): ?>
+			<?php if ($container1_html = $this->getChildChildHtml('container1', '', true, true)): ?>
+				<div class="container1-wrapper"><?php echo $container1_html; ?></div>
+			<?php endif; ?>
+		<?php endif;?>
+
+
 		<div class="product-primary-column product-shop <?php echo $grid['primCol']; ?>">
 
 			<div class="product-name">
 				<h1 itemprop="name"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
 			</div>
 			
-			<?php echo $this->getReviewsSummaryHtml($_product, false, true); //reviews ?>
+			<!--test review-->
 
 			<?php if ($shortDescription): ?>
 				<div class="short-description"><div class="std" itemprop="description"><?php echo $shortDescription; ?></div></div>
@@ -171,27 +212,11 @@
 				<div class="extrahint-wrapper"><?php echo $extrahint_html; ?></div>
 			<?php endif; ?>
 
-			<div <?php if ($useRichSnippets) echo $helperSnippets->getOfferItemscope(); ?>>
-				<div class="product-type-data<?php echo $productTypeClasses; ?>"><?php echo $this->getChildHtml('product_type_data'); ?></div>
-				<?php echo $this->getTierPriceHtml(); ?>
-				<?php echo $priceProperties; ?>
-			</div> <?php //end: offers ?>
 
-			<?php if (!$this->hasOptions()): //add to cart when no options (e.g. simple products) ?>
-				<?php if($_product->isSaleable()): ?>
-					<div class="add-to-box">
-						<?php echo $this->getChildHtml('addtocart') ?>
-					</div>
-				<?php endif; ?>
-				<?php echo $this->getChildHtml('extra_buttons') ?>
-			<?php endif; ?>
 
-			<?php if ($_product->isSaleable() && $this->hasOptions()): ?>
-				<?php if ($container1_html = $this->getChildChildHtml('container1', '', true, true)): ?>
-					<div class="container1-wrapper"><?php echo $container1_html; ?></div>
-				<?php endif; ?>
-			<?php endif;?>
-			
+
+			<!--test-->
+
 			<?php if ($addtoLinksHtml = $this->getChildHtml('addto')): //compare, wishlist, send to friend ?>
 				<div class="action-box clearer">
 					<?php echo $addtoLinksHtml; ?>
@@ -230,13 +255,7 @@
 
 		<?php endif; ?>
 
-		<?php if ($_product->isSaleable() && $this->hasOptions()): ?>
-			<?php if ($container2_html = $this->getChildChildHtml('container2', '', true, true)): ?>
-				<div class="box-additional <?php echo $grid['cont2Col']; ?>">
-					<div class="container2-wrapper"><?php echo $container2_html; ?></div>
-				</div>
-			<?php endif; ?>
-		<?php endif; ?>
+
 
 	</form>
 	<script type="text/javascript">
