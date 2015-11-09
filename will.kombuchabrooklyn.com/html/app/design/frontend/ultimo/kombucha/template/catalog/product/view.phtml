@@ -306,7 +306,7 @@
 	</script>
 
 	<?php //Lower primary column ?>
-	<div class="box-additional <?php echo $grid['lowerPrimCol']; ?>">
+	<div class="product-info box-additional <?php echo $grid['lowerPrimCol']; ?>">
 
 		<?php if (isset($p['lowerPrimCol_1'])) echo $p['lowerPrimCol_1']; ?>
 		
@@ -328,3 +328,47 @@
 	<?php endif; ?>
 	<!-- </div>end: product-left-->
 </div> <!-- end: product-view -->
+<script type="text/javascript">
+	window.onload = function(){
+		var productView = document.getElementsByClassName("product-view")[0];
+		var right = productView.getElementsByClassName("product-right")[0];
+		var image = productView.getElementsByClassName("product-img-column")[0];
+		var title = productView.getElementsByClassName("product-primary-column")[0];
+		var info = productView.getElementsByClassName("product-info")[0];
+		moveTitle();
+
+		function moveTitle() {
+
+			var rightH = right.offsetHeight - image.offsetHeight;
+			console.log(right.offsetHeight);
+			console.log(image.offsetHeight);
+			console.log("$$$$$$$$$$$");
+			console.log(right.style.width);
+			console.log(image.style.height);
+			console.log("$$$$$$$$$$$");
+			if (window.innerWidth > 768 && rightH > 0) {
+				var titleH = rightH - 30;
+				title.style.top = "-" + titleH + "px";
+				info.style.top = "-" + titleH + "px";
+			}
+
+
+		}
+
+		addEvent(window, 'resize', moveTitle);
+
+		function addEvent(object, type, callback) {
+			if (object == null || typeof(object) == 'undefined') return;
+			if (object.addEventListener) {
+				object.addEventListener(type, callback, false);
+			} else if (object.attachEvent) {
+				object.attachEvent("on" + type, callback);
+			} else {
+				object["on"+type] = callback;
+			}
+		};
+	}
+
+
+
+</script>
