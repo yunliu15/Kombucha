@@ -47,9 +47,10 @@ if ($_imgUrl = $_category->getImageUrl()) {
     <h1><?php echo $_helper->categoryAttribute($_category, $_category->getName(), 'name') ?></h1>
 </div>
 
+<?php echo $this->getMessagesBlock()->toHtml() ?>
 <?php if(!$this->isContentMode() && !$this->isMixedMode()): ?>
 <div class="category-contain">
-    <?php echo $this->getMessagesBlock()->toHtml() ?>
+
     <div class="category-description-rt">
     <?php if($_imgUrl): ?>
         <?php echo $_imgHtml ?>
@@ -64,6 +65,18 @@ if ($_imgUrl = $_category->getImageUrl()) {
     <?php endif; ?>
     </div>
 </div>
+<?php else:?>
+    <?php if($_imgUrl): ?>
+        <?php echo $_imgHtml ?>
+    <?php endif; ?>
+
+
+    <?php if($_description=$this->getCurrentCategory()->getDescription()): ?>
+        <div class="category-description std">
+
+            <?php echo $_helper->categoryAttribute($_category, $_description, 'description') ?>
+        </div>
+    <?php endif; ?>
 <?php endif;?>
 
 <?php if($this->isContentMode()): ?>

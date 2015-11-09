@@ -117,13 +117,13 @@ p, span, label, table,li {font-size: 14px;}
 	margin: 0;
 	background: #fff;
 	cursor: pointer;
-	line-height: 38px;
+	line-height: 37px;
 	min-width: 0;
 	margin-top: 8px;
 }
 #header-cart button span span, .col-main .cart .checkout-types .btn-checkout span span,.account-login .button span span, #form-validate .button span span, #contactForm .button span span {
 	background-color: #af1f31;
-	padding: 9px 17px;
+	padding: 10px 17px;
 	height: 33px;
 	border: 1px solid #fff;
 	color:#fff;
@@ -430,6 +430,7 @@ border-color:#AF1F31;}*/
 .inner-container .col-main>.category-image {float:right; width:60%; margin:0;}
 
 .col-main p iframe {width:60%;}
+.col-main p.full-size iframe {width:100%;}
 
 .std .col-narrow.right iframe {max-width:120%;}
 
@@ -1314,10 +1315,14 @@ border-color:#AF1F31;}*/
 	height:auto;
 }
 
+.category-description-lf .category-description {margin:0;}
+
 .category-contain .category-description-rt{
 	width: 65%;
 	float:right;
 }
+.category-contain .category-description-rt .category-image {margin:0;}
+
 .category-contain .category-description-lf p:nth-of-type(2) {
 	text-align: center;
 	font-size: medium;
@@ -1589,10 +1594,12 @@ border-color:#AF1F31;}*/
 
 	/* remove gap above name */
 .product-view .product-primary-column, .product-view>.box-additional {position:relative;}
-/*.product-view .product-left{width:64.67%;float:left;margin-right:2%;}
-.col-main .product-view .product-shop, .col-main .product-view .product-img-column {width:100%;}
+.product-view .box-description hr {margin-top:30px;}
 
-.product-view .product-right .box-additional {width:100%;}*/
+.product-view .product-img-column,.product-view .product-primary-column, .product-view>.box-additional {
+	width:63.67%;
+	margin-right:2%;
+}
 
 #product-addtocart-button {
 	border: 1px solid #000;
@@ -1746,11 +1753,11 @@ border-color:#AF1F31;}*/
 	margin-top: 8px;
 	height:auto;
 }
-.wrapper .opc-wrapper-opc .btn-checkout span {background-color: #af1f31!important;font-size:18px; font-weight:normal;line-height:30px;height:auto;}
+.wrapper .opc-wrapper-opc .btn-checkout span {background-color: #af1f31!important;font-size:18px; font-weight:normal;line-height:44px;height:auto;}
 .wrapper .opc-wrapper-opc .btn-checkout span span {
 	background-color: #af1f31;
 	padding:0px 17px!important;
-	height: 33px;
+	height: 44px;
 	border: 1px solid #fff;
 	background: -webkit-gradient(linear, left top, left bottom, from(#AF1F31), to(#d01f31));
 	background: -moz-linear-gradient(top, #AF1F31, #d01f31);
