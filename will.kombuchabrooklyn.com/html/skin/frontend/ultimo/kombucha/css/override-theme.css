@@ -1487,10 +1487,10 @@ border-color:#AF1F31;}*/
 /*fix footer button */
 .footer-container .inner-container{padding:0;}
 
-#subscribe-form {
+/*#subscribe-form {
 	position:absolute;
 	right: 0;
-	top: -220px;}
+	top: -220px;}*/
 
 #subscribe-form label {display:none;}
 #subscribe-form  .input-box .input-text {

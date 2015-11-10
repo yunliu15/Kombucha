@@ -3103,8 +3103,8 @@ a.availability-only { cursor:pointer; } /* It may also be a link to toggle more 
 	margin:0;
 	width:140%;
 	position:absolute;
-	top:-103%;
-	left:-20%;
+	top:103%;
+	
 	text-align:center;
 	background-color:#fff;
 	background-color:rgba(255,255,255,0.9);
