@@ -13,11 +13,20 @@
  *
  */
 
+
+
+
+/*.page, .wrapper, body, #root-wrapper  {background:linear-gradient(to bottom,#fff 90%, #cac5b6)!important;}
+#top, .main-container {background-color:white;}*/
+
 p, span, label, table,li {font-size: 14px;}
 .wrapper h1 {font-size:21px;}
 .wrapper h3 {font-size:16px;}
 .page-title h1 {font-weight:bold;}
-.wrapper .std h2 {font-size:22px;}
+.wrapper .std h2, .box-related-posts h2 {font-size:22px;}
+.blog-home h2 {font-size:18px;}
+.box-related-posts h2 {margin-top:20px;}
+
 /*.wrapper .button{
 	color:#566B67;
 	padding: 0px 15px;
@@ -1584,6 +1593,9 @@ border-color:#AF1F31;}*/
 
 .product-view .product-options-bottom .price-label,.col-main .product-view .price-box  .price{font-size:18px;}
 
+.product-type-data .price-box .old-price .price {margin-left:5px;color: #C76200;font-weight:normal;}
+
+
 .col-main .product-view .product-shop .short-description, .product-right .rewards-special-review-summary  {font-size:14px;}
 .col-main .product-view .box-reviews .form-add h3, .col-main .product-view .box-reviews .form-add h4 {font-size:16px;}
 .col-main .product-view .data-table th {font-weight:normal;}
@@ -1659,7 +1671,7 @@ border-color:#AF1F31;}*/
 
 .product-view .availability {color:#333;}
 
-#customer-reviews .rating-table tr th{display:none;}
+#customer-reviews .ratings-table tr th{display:none;}
 
 .add-to-links .feature-icon-hover:hover .ib.icon-color-productview {
 	background-color: #af1f31 !important;
@@ -1733,6 +1745,9 @@ border-color:#AF1F31;}*/
 .cart .discount h2, .cart .shipping h2 {font-size:1.333em;}
 
 /*test for check out */
+/*.cart .cart-left-column .rewards-box-spend-minicart:first-of-type {display:none;}*/
+
+
 .wrapper .opc-wrapper-opc .opc-login-trigger, .wrapper .opc-wrapper-opc .payment-block dt,.wrapper .review-menu-block a.review-total {
 	color: #566B67;
 	padding: 0px 15px;
@@ -1846,6 +1861,20 @@ border-color:#AF1F31;}*/
 .std img[title="Cooking with Kombucha"], .std img[width="975"] {
 	width:auto!important;
 	height:auto!important;
+}
+
+/* blog */
+
+.blog-home .post-list h2 {margin-top:10px; padding-bottom:5px;border-bottom: 1px solid #E3D9CF;clear:left;}
+
+.col-left .wp-sidebar .block-blog {margin-top:0;}
+.wp-sidebar .block-blog .block-title {padding-top:0;}
+.wp-sidebar .block-blog .blog-search {padding:0;}
+.blog-desc.blog-tag-line {
+	margin: 5px 0 20px 0;
+	font-size: 20px;
+	color: #af1f31;
+	font-style: italic;
 }
 
 @media
@@ -2017,6 +2046,9 @@ only screen and (        min-device-pixel-ratio: 1.5)
 
 
 @media only screen and (max-width: 768px){
+	.std img {height:auto!important;}
+
+
 	.main-container, .footer-container {padding:0 20px!important;}
 	.footer-container .footer-primary-container,  .footer-container .footer-primary{padding-top:0;}
 
@@ -2100,6 +2132,8 @@ only screen and (        min-device-pixel-ratio: 1.5)
 	.product-view .product-right {width:100%;margin-bottom:50px;}
 
 	.product-view .product-secondary-column {display:none;}
+
+	.price-box .old-price .price{margin-left:0;}
 
 	.col3-set .col-1, .col3-set .col-2, .col3-set .col-3 {
 		width: 100%;
