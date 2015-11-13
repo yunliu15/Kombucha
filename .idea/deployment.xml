@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="Kombucha">
+  <component name="PublishConfigData" serverName="Kombucha SSH">
     <serverData>
-      <paths name="Kombucha">
+      <paths name="Kombucha SSH">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
+          <excludedPaths>
+            <excludedPath path="/var" />
+            <excludedPath path="/will.kombuchabrooklyn.com/magento" />
+            <excludedPath path="/will.kombuchabrooklyn.com/iworx-backup" />
+            <excludedPath path="/will.kombuchabrooklyn.com/backup" />
+            <excludedPath path="/will.kombuchabrooklyn.com/html/wp" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>

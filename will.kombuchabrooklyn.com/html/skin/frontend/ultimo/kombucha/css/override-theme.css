@@ -1362,6 +1362,8 @@ border-color:#AF1F31;}*/
 	color: #0000ff!important;
 }
 
+.products-grid .availability span {margin-left:20px;}
+
 /*tool bar*/
 .category-products .toolbar {position: relative;}
 .category-products .toolbar .sorter .amount {display:none;}
