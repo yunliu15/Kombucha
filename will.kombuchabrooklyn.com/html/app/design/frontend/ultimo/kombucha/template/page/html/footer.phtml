@@ -194,8 +194,8 @@
 	<div class="footer-bottom-container section-container">
 		<div class="footer-bottom footer container">
 			<div class="inner-container">
-				<?php //code that shows newsletter subscribe?>
-			<?php echo $this->getLayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe.phtml')->toHtml(); ?>
+			<?php //code that shows newsletter subscribe?>
+			<?php //echo $this->getLayout()->createBlock('newsletter/subscribe')->setTemplate('newsletter/subscribe.phtml')->toHtml(); ?>
 				<div class="clearer">
 				
 					<?php if (!empty($b['bottom']['copyright'])): ?>
@@ -211,6 +211,12 @@
 					<?php if (!empty($b['bottom']['store_switcher'])): ?>
 						<div class="item item-right"><?php echo $b['bottom']['store_switcher']; ?></div>
 					<?php endif; ?>
+
+
+
+					<!--add by ly-->
+					<div id="aviscertifies_widget_216d6071-27e9-1354-4de5-6e18f8a2af38_wf1_5" class="aviscertifies_widget_216d6071-27e9-1354-4de5-6e18f8a2af38_wf1_5 AC_position-fixed-bottom"><a href="http://www.verified-reviews.com/index.php?action=act_count&amp;client=www.kombuchabrooklyn.com&amp;widget=wf1_5" id="aviscertifies_widget_216d6071-27e9-1354-4de5-6e18f8a2af38" rel="ac_mbox_site" title="See our customer reviews" target="_blank"><img src="http://www.verified-reviews.com/avis-clients/widget/2/1/6/216d6071-27e9-1354-4de5-6e18f8a2af38/216d6071-27e9-1354-4de5-6e18f8a2af38_wf1_5.png?time=1428879603" style="border: 1px solid transparent;" alt="See our customer reviews"></a></div>
+					<!--end:add-->
 
 				</div> <!-- end: footer-bottom section -->
 

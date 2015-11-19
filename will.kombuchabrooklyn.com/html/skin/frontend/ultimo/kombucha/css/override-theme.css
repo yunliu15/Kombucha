@@ -45,7 +45,7 @@ p, span, label, table,li {font-size: 14px;}
 
 .wrapper .button:hover span{color:#566B67!important;border:none;}
 
-.main .success-msg {
+.main .success-msg,#MB_frame .success-msg {
 	border-color: #FBC97A;
 	background-color: #f9ebc4;
 	background-image: url(../images/i_msg-success.gif);
@@ -156,6 +156,7 @@ p, span, label, table,li {font-size: 14px;}
 
 #header-cart button:hover span, .col-main .cart .checkout-types .btn-checkout:hover span, .account-login .button:hover span, #form-validate .button:hover span, #contactForm .button:hover span {border:none;}
 #header-cart button:hover span span, .col-main .cart .checkout-types .btn-checkout:hover span span, .account-login .button:hover span span, #form-validate .button:hover span span, #contactForm .button:hover span span {
+	color:#fff!important;
 	border: 1px solid #fff;
 	background: -webkit-gradient(linear, left top, left bottom, from(#F60), to(#d01f31));
 }
@@ -1257,7 +1258,7 @@ border-color:#AF1F31;}*/
 .cart-left-column .grid-full,
 .cart-right-column .grid-full { width:100%; }
 
-
+.cart-left-column .discount h4 {margin-top:20px;padding-top:7px;padding-bottom:7px;border-bottom: 1px solid #e5e5e5;}
 
 /**
  *
@@ -1292,6 +1293,8 @@ border-color:#AF1F31;}*/
 
 
 /* test for category */
+a[title="View Details"].button {font-size:14px;}
+
 .col-main .category-title {position:relative;z-index: 99;}
 .col-main .category-title h1 {
 	font-size:21px;
@@ -1441,16 +1444,22 @@ border-color:#AF1F31;}*/
 .category-products .products-grid .item .button{
 	color:#566B67;
 	padding: 0px 15px;
-	margin-right:50px;
+	/*margin-right:50px;*/
 }
-.category-products .products-grid .item .button:hover{
+.category-products .products-grid .item .button:hover, #MB_content .button:hover{
 	color: #566B67;
 	border: solid 1px #FBC97A;
 	background: #FBC97A;
 	background: -webkit-gradient(linear, left top, left bottom, from(#f9ebc4), to(#FBC97A));
 }
+/*MB instant cart*/
+#MB_content h1 {font-size:21px;}
+#MB_header {background-color:#AF1F31;}
+#MB_caption {color:#fff;text-shadow:none;}
 
-.category-products .products-grid .item .button:hover span{color:#566B67!important;border:none;}
+.category-products .products-grid .item .button:hover span, #MB_content .button:hover span{color:#566B67!important;border:none;}
+
+
 .category-products .products-grid .item .actions a:hover{color:#566B67!important;}
 
 .products-grid .price-box {font-size:1.25em;}
@@ -1500,9 +1509,11 @@ border-color:#AF1F31;}*/
 }
 
 .products-grid.equal-height .item .actions{
-	position: static;
-	float:right;
+	/*position: static;
+	float:right;*/
 	margin-top:0;
+	bottom:15px;
+	right:0;
 }
 
 .rating-box .rating {
@@ -1644,10 +1655,17 @@ border-color:#AF1F31;}*/
 	min-width:0;
 	margin-top: 8px;
 }
+#MB_content #product-addtocart-button:hover {border: 1px solid #000;
+	border-right: 2px solid #000;}
+#MB_content #product-addtocart-button:hover span {color:#fff!important;}
 
+#MB_content #product-addtocart-button:hover span span {
+	color:#fff!important;
+	border: 1px solid #fff!important;}
 
 #product-addtocart-button span span {
 	background-color: #af1f31;
+	color:#fff;
 	padding:10px 17px;
 	height: 33px;
 	border: 1px solid #fff;
@@ -1709,9 +1727,10 @@ border-color:#AF1F31;}*/
 	margin:0;
 	width:33.3%;
 }
+.footer-primary .ssl {float:right;margin-top:20px;}
+.footer-primary .ssl img {border:none;}
 
-
-/* test for cart */
+	/* test for cart */
 .cart td {vertical-align: middle;}
 #shopping-cart-totals-table .caption {
 	position: static;
@@ -1750,7 +1769,7 @@ border-color:#AF1F31;}*/
 /*.cart .cart-left-column .rewards-box-spend-minicart:first-of-type {display:none;}*/
 
 
-.wrapper .opc-wrapper-opc .opc-login-trigger, .wrapper .opc-wrapper-opc .payment-block dt,.wrapper .review-menu-block a.review-total {
+.wrapper .opc-wrapper-opc .opc-login-trigger, .wrapper .opc-wrapper-opc .payment-block dt,.wrapper .review-menu-block a.review-total,.review-menu-block a.review-total.open {
 	color: #566B67;
 	padding: 0px 15px;
 	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f9ebc4));
@@ -1762,12 +1781,14 @@ border-color:#AF1F31;}*/
 	line-height: 45px;
 }
 
-.wrapper .opc-wrapper-opc .opc-login-trigger:hover, .wrapper .opc-wrapper-opc .payment-block dt:hover,.wrapper .review-menu-block a.review-total:hover {
+.wrapper .opc-wrapper-opc .opc-login-trigger:hover, .wrapper .opc-wrapper-opc .payment-block dt:hover,.wrapper .review-menu-block a.review-total:hover, .wrapper .review-menu-block a.review-total.open, .wrapper .opc-wrapper-opc .payment-block dt.active {
 	color: #566B67!important;
 	border: solid 1px #FBC97A;
 	background: #FBC97A!important;
 	background: -webkit-gradient(linear, left top, left bottom, from(#f9ebc4), to(#FBC97A))!important;
 }
+
+.wrapper .review-menu-block a.review-total.open ~ .polygon {display:none;}
 
 .wrapper .opc-wrapper-opc .payment-block dt label,.wrapper .review-menu-block a.review-total span  {color: #566B67;font-family: 'Open Sans', Arial, Helvetica;}
 
@@ -1858,6 +1879,13 @@ border-color:#AF1F31;}*/
 #faq ol li {padding: 3px 0;}
 #faq ul {list-style-type: disc;padding: 0px 0 0px 20px;}
 #faq ul li {padding: 3px 0;}
+#faq .cms-img-list {
+	list-style:none;
+	text-align:center;
+}
+
+
+#faq .cms-img-list li {display:inline-block;}
 
 /* cms */
 .std img[title="Cooking with Kombucha"], .std img[width="975"] {
@@ -1865,6 +1893,8 @@ border-color:#AF1F31;}*/
 	height:auto!important;
 }
 
+.cms-what-is-kombucha .col2-set {margin-top:20px;}
+.cms-what-is-kombucha .col2-set .left {margin-bottom:20px;}
 /* blog */
 
 .blog-home .post-list h2 {margin-top:10px; padding-bottom:5px;border-bottom: 1px solid #E3D9CF;clear:left;}
@@ -2108,7 +2138,7 @@ only screen and (        min-device-pixel-ratio: 1.5)
 	}
 
 
-	.products-grid.equal-height .item .actions {float: none;}
+	.products-grid.equal-height .item .actions {float: none;left: 2px;}
 	.products-grid .price-box {
 		min-height: 40px;
 	}
@@ -2154,7 +2184,9 @@ only screen and (        min-device-pixel-ratio: 1.5)
 
 	/* cms pages */
 	.cms-img img {width: 50%!important;box-sizing: border-box;margin:0 0 10px 0!important;}
-
+.cms-calendar-classes-events .wrap-zozi-cal, .cms-calendar-classes-events .wrap-google-cal iframe {
+	width: 100%;
+}
 	/* subscribe */
 	/*#subscribe-form {left:0;top:-50px;}*/
 }
