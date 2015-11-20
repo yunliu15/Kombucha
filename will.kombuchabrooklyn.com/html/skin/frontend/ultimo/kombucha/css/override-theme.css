@@ -67,6 +67,8 @@ body .error-msg {
 
 .wrapper { border-top-style:solid; border-top-width:5px; }
 
+.wrapper .form-list .name-middlename {width:135px;}
+
 /* Additional margin for sidebars
 -------------------------------------------------------------- */
 .col-left > *,
