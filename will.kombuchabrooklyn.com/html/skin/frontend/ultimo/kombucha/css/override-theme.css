@@ -43,7 +43,7 @@ p, span, label, table,li {font-size: 14px;}
 	background: -webkit-gradient(linear, left top, left bottom, from(#f9ebc4), to(#FBC97A));
 }
 
-.wrapper .button:hover span{color:#566B67!important;border:none;}
+.wrapper .button:hover span{color:#566B67!important;border:none;background:none!important;}
 
 .main .success-msg,#MB_frame .success-msg {
 	border-color: #FBC97A;
@@ -158,7 +158,8 @@ p, span, label, table,li {font-size: 14px;}
 #header-cart button:hover span span, .col-main .cart .checkout-types .btn-checkout:hover span span, .account-login .button:hover span span, #form-validate .button:hover span span, #contactForm .button:hover span span {
 	color:#fff!important;
 	border: 1px solid #fff;
-	background: -webkit-gradient(linear, left top, left bottom, from(#F60), to(#d01f31));
+	background:#d01f31!important;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F60), to(#d01f31))!important;
 }
 /* Global Messages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1457,7 +1458,11 @@ a[title="View Details"].button {font-size:14px;}
 #MB_header {background-color:#AF1F31;}
 #MB_caption {color:#fff;text-shadow:none;}
 
-.category-products .products-grid .item .button:hover span, #MB_content .button:hover span{color:#566B67!important;border:none;}
+.category-products .products-grid .item .button:hover span, #MB_content .button:hover span{color:#566B67!important;border:none;background:none!important;}
+#MB_content #product-addtocart-button:hover span {
+	background: #d01f31!important;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F60), to(#d01f31))!important;
+	background: transparent -moz-linear-gradient(center top , #F60, #D01F31)!important;}
 
 
 .category-products .products-grid .item .actions a:hover{color:#566B67!important;}
@@ -1471,9 +1476,7 @@ a[title="View Details"].button {font-size:14px;}
 	margin-right:2%;
 	width: 32%;
 }
-.category-products-grid .item:nth-of-type(3),
-.category-products-grid .item:nth-of-type(6),
-.category-products-grid .item:nth-of-type(9) {
+.category-products-grid .item:nth-of-type(3n) {
 	margin-right:0;
 }
 .category-products-grid .item .product-image-wrapper {max-width: 100%!important;}
@@ -1538,11 +1541,13 @@ a[title="View Details"].button {font-size:14px;}
 }
 #subscribe-form .button {line-height:25px;
 	height: 25px;
+	background:#80B2AC;
 	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#80B2AC));
 	border: 1px solid #A9DADC;
 }
 
 #subscribe-form .button:hover{
+	background:#ffffff;
 	background: -webkit-gradient(linear, left top, left bottom, from(#80B2AC), to(#ffffff));
 	border: 1px solid #000;
 }
@@ -1553,7 +1558,7 @@ a[title="View Details"].button {font-size:14px;}
 	line-height: 25px;
 	);
 }
-#subscribe-form .button:hover span{border:none;color:#555!important;}
+#subscribe-form .button:hover span{border:none;color:#555!important;background:none!important;}
 #subscribe-form .button:hover{color:#000;}
 
 
@@ -1677,6 +1682,7 @@ a[title="View Details"].button {font-size:14px;}
 #product-addtocart-button:hover span span{
 	color: #fff;
 	border: 1px solid #fff;
+	background:#d01f31;
 	background: -webkit-gradient(linear, left top, left bottom, from(#F60), to(#d01f31));
 }
 
@@ -1759,7 +1765,16 @@ a[title="View Details"].button {font-size:14px;}
 .col-main .cart button:hover span {
 	color: #566B67!important;
 	border: none;
+	background: none !important
 }
+.col-main .cart button.btn-proceed-checkout:hover span {
+	background: #d01f31!important;
+	background: -webkit-gradient(linear, left top, left bottom, from(#F60), to(#d01f31))!important;
+	background: transparent -moz-linear-gradient(center top , #F60, #D01F31)!important;
+
+}
+
+
 .cart .cart-table .product-name {font-size: 1em;}
 
 
@@ -1772,7 +1787,9 @@ a[title="View Details"].button {font-size:14px;}
 .wrapper .opc-wrapper-opc .opc-login-trigger, .wrapper .opc-wrapper-opc .payment-block dt,.wrapper .review-menu-block a.review-total,.review-menu-block a.review-total.open {
 	color: #566B67;
 	padding: 0px 15px;
+	background: #f9ebc4;
 	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f9ebc4));
+	background: linear-gradient(left top, #ffffff, #f9ebc4);
 	border: solid 1px #FBC97A;
 	font-size: 16px;
 	font-weight: normal;
@@ -1793,6 +1810,7 @@ a[title="View Details"].button {font-size:14px;}
 .wrapper .opc-wrapper-opc .payment-block dt label,.wrapper .review-menu-block a.review-total span  {color: #566B67;font-family: 'Open Sans', Arial, Helvetica;}
 
 .wrapper .opc-wrapper-opc .discount-block .button span span{
+	background: #f9ebc4;
 	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f9ebc4));
 	border: solid 1px #FBC97A;
 	color: #566B67;
@@ -1837,6 +1855,7 @@ a[title="View Details"].button {font-size:14px;}
 .wrapper .opc-wrapper-opc .btn-checkout:hover span span{
 	color: #fff!important;
 	border: 1px solid #fff;
+	background: #d01f31;
 	background: -webkit-gradient(linear, left top, left bottom, from(#F60), to(#d01f31));
 }
 .wrapper .opc-wrapper-opc h2 {font-size:22px;}
@@ -1856,7 +1875,7 @@ a[title="View Details"].button {font-size:14px;}
 
 .checkout-types {display:block!important;}
 
-
+.my-account .order-details .order-points-earned .caption,.my-account .order-details .order-points-spent .caption{position:static; margin:0;/*display:table-cell;*/}
 	/*test for calendar view*/
 .wrap-iframes:after {
 	display: table;
@@ -1893,8 +1912,16 @@ a[title="View Details"].button {font-size:14px;}
 	height:auto!important;
 }
 
+
 .cms-what-is-kombucha .col2-set {margin-top:20px;}
 .cms-what-is-kombucha .col2-set .left {margin-bottom:20px;}
+
+
+/* contact form */
+#contactForm .form-list > .input-box {margin-bottom:10px;}
+#contactForm .input-box label {float:none;}
+#contactForm .input-box .input-text {display:block;}
+#contactForm .buttons-set .required {float:none;}
 /* blog */
 
 .blog-home .post-list h2 {margin-top:10px; padding-bottom:5px;border-bottom: 1px solid #E3D9CF;clear:left;}
@@ -2223,5 +2250,6 @@ only screen and (        min-device-pixel-ratio: 1.5)
 	.cms-img img {width: 100%!important;}
 	#subscribe-form {position:relative;}
 	#subscribe-form label {display:none!important;}
-
+	/*blog*/
+	.is-blog .post-list img{height:auto!important;}
 }
