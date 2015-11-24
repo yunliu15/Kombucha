@@ -62,6 +62,8 @@ body .error-msg {
 
 #root-wrapper .cms-index-index .messages, #root-wrapper .cms-home .messages,#root-wrapper .catalog-category-view .messages {margin: 0;}
 
+
+body .button:focus, body .button:active {color:#566B67;}
 	/* Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 
@@ -1808,6 +1810,8 @@ a[title="View Details"].button {font-size:14px;}
 	border: solid 1px #FBC97A!important;
 }
 
+.compare-table button.button:hover span {color:#566B67!important;border:none;}
+body.page-popup .buttons-set button.button:hover span {color:#566B67!important;border:none!important;}
 
 .opc-wrapper-opc #modal-login .btn span {height:32px;}
 
@@ -1824,7 +1828,7 @@ body.checkout-onepage-success .products-grid .product-image img {border:1px soli
 	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f9ebc4))!important;
 	background: -moz-linear-gradient(top, #ffffff, #f9ebc4)!important;
 }
-.opc-messages-action .button:hover span span, .opc-wrapper-opc #modal-login .btn:hover,.opc-wrapper-opc #modal-login .btn:hover span span {
+.opc-messages-action .button:hover span span, .opc-wrapper-opc #modal-login .btn:hover,.opc-wrapper-opc #modal-login .btn:hover span span,.compare-table button.button:hover, body.page-popup .buttons-set button.button:hover {
 	background: #FBC97A!important;
 	background: -webkit-gradient(linear, left top, left bottom, from(#f9ebc4), to(#FBC97A))!important;
 	background: -moz-linear-gradient(top, #f9ebc4, #FBC97A)!important;}
