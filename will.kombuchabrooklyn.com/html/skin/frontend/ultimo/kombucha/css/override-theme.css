@@ -94,6 +94,8 @@ body .error-msg {
 
 
 /* test for header */
+/*.header-top #topPayPalIn {display:none;}*/
+
 .inner-container .right-column:after {
 	display: table;
 	line-height: 0;
@@ -1742,8 +1744,13 @@ a[title="View Details"].button {font-size:14px;}
 	width:33.3%;
 }
 .footer-primary .ssl {float:right;margin-top:20px;}
+
 .footer-primary .ssl img {border:none;}
 
+.footer-primary .grid12-4:nth-of-type(2) .column-1 {width:42%;}
+.footer-primary .grid12-4:nth-of-type(2) .column-2 {width:58%;}
+.footer-primary .grid12-4:nth-of-type(2) {width: 34.3%;}
+.wrapper .footer-primary .grid12-4:nth-of-type(3) {width: 28.3%;}
 	/* test for cart */
 .cart td {vertical-align: middle;}
 #shopping-cart-totals-table .caption {
@@ -1792,19 +1799,32 @@ a[title="View Details"].button {font-size:14px;}
 
 /*test for check out */
 /*.cart .cart-left-column .rewards-box-spend-minicart:first-of-type {display:none;}*/
+.opc-wrapper-opc #modal-login .btn {
+	color: #566B67!important;
+	padding: 0px 15px;
+	background: #f9ebc4!important;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f9ebc4))!important;
+	background: -moz-linear-gradient(top, #ffffff, #f9ebc4)!important;
+	border: solid 1px #FBC97A!important;
+}
+
+
+.opc-wrapper-opc #modal-login .btn span {height:32px;}
+
+
 body.checkout-onepage-success .products-grid .product-image {border:none;}
 body.checkout-onepage-success .products-grid .product-image img {border:1px solid #E3D9CF;}
 
 .opc-wrapper-opc .opc-menu .review-total .fa-shopping-cart {float:left;margin-left: 15px;}
 
 
-.opc-messages-action .button span span {
+.opc-messages-action .button span span, .opc-wrapper-opc #modal-login .btn span span {
 	color: #566B67!important;
 	background: #f9ebc4!important;
 	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f9ebc4))!important;
 	background: -moz-linear-gradient(top, #ffffff, #f9ebc4)!important;
 }
-.opc-messages-action .button:hover span span {
+.opc-messages-action .button:hover span span, .opc-wrapper-opc #modal-login .btn:hover,.opc-wrapper-opc #modal-login .btn:hover span span {
 	background: #FBC97A!important;
 	background: -webkit-gradient(linear, left top, left bottom, from(#f9ebc4), to(#FBC97A))!important;
 	background: -moz-linear-gradient(top, #f9ebc4, #FBC97A)!important;}
@@ -2143,6 +2163,9 @@ only screen and (        min-device-pixel-ratio: 1.5)
 
 	.main-container, .footer-container {padding:0 20px!important;}
 	.footer-container .footer-primary-container,  .footer-container .footer-primary{padding-top:0;}
+
+	.footer-primary .grid12-4:nth-of-type(2) .column-1 {width:50%;}
+	.footer-primary .grid12-4:nth-of-type(2) .column-2 {width:50%;}
 
 	.col-main .contain-blog-home .home-post {box-sizing:border-box; width:50%;margin-bottom:30px;min-height:210px;}
 

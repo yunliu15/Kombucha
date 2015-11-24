@@ -211,7 +211,7 @@
 
             <block type="icart/checkout_cart_crosssell" name="checkout.cart.crosssell" as="crosssell" template="checkout/cart/crosssell.phtml"/>
 
-            <block type="wishlist/customer_sidebar" name="wishlist_sidebar" template="wishlist/sidebar.phtml" before="-"/>
+           <!--test for wishlist <block type="wishlist/customer_sidebar" name="wishlist_sidebar" template="wishlist/sidebar.phtml" before="-"/>-->
             <block type="catalog/product_compare_sidebar" name="catalog.compare.sidebar" template="catalog/product/compare/sidebar.phtml" before="-"/>
 
         </block>
@@ -264,7 +264,8 @@
                 <block type="checkout/cart_totals" name="checkout.cart.totals" as="totals" template="checkout/cart/totals.phtml"/>
             </block>
 
-            <block type="wishlist/customer_sidebar" name="wishlist_sidebar" template="wishlist/sidebar.phtml" before="-"/>
+         <!--test for wishlist  <block type="wishlist/customer_sidebar" name="wishlist_sidebar" template="wishlist/sidebar.phtml" before="-"/>-->
+
             <block type="wishlist/customer_wishlist" name="customer.wishlist" template="wishlist/view.phtml">
 
                 <!-- new -->
