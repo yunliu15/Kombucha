@@ -1797,10 +1797,13 @@ a[title="View Details"].button {font-size:14px;}
 .cart .cart-table .product-name {font-size: 1em;}
 
 
-.cart .discount h2, .cart .shipping h2 {font-size:1.333em;}
+.cart .discount h2, .cart .shipping h2, .cart h2 {font-size:1.333em;}
 
 /*test for check out */
 /*.cart .cart-left-column .rewards-box-spend-minicart:first-of-type {display:none;}*/
+
+.opc-wrapper-opc .opc-data-table .cart-points-total_earned .caption{position:static;margin:0; font-weight:normal;}
+
 .opc-wrapper-opc #modal-login .btn {
 	color: #566B67!important;
 	padding: 0px 15px;
@@ -1914,6 +1917,7 @@ body.checkout-onepage-success .products-grid .product-image img {border:1px soli
 	background: -moz-linear-gradient(top, #F60, #d01f31)!important;
 }
 .wrapper .opc-wrapper-opc h2 {font-size:22px;}
+.wrapper .opc-wrapper-opc .discount h2 {font-size:16px;font-weight: 600;}
 
 .opc-wrapper-opc .opc-col-left .fields .field.name-lastname {float:left;}
 .shipping-block strong {font-size: 14px;}
